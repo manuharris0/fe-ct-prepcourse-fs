@@ -62,10 +62,16 @@ function colors(color) {
    // IMPORTANTE: utilizar el statement SWITCH.
    // Tu código:
    switch (color) {
-      case color:
-         return "This is " + color;
+      case "blue":
+         return "This is blue";
+      case "red":
+         return "This is red";
+      case "green":
+         return "This is green";
+      case "orange":
+         return "This is orange";
       default:
-         return "Color not found"
+         return "Color not found";
    }
 }
 
@@ -94,8 +100,9 @@ function esEntero(num) {
    // Ejemplo: (-10) ---> true
    // De lo contrario, retorna "false".
    // Tu código:
-   if (num !== float)
-      return true;
+   if (num % 1 === 0){
+      return true
+   }
    else return false;
 }
 
@@ -140,6 +147,16 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
+   if (num < 2)
+      return false;
+   if (num === 2)
+      return true;
+   for (let i = 2; i < num; i++){
+      if (num % i === 0){
+      return false
+      }
+   }
+   return true
 }
 
 function esVerdadero(valor) {
@@ -155,9 +172,10 @@ function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar True.
    // Caso contrario, retornar False.
    // Tu código:
-   if (num.length === 3)
-      return true;
-   else return false;
+   if (num > 99 && num < 1000){
+      return true
+   }
+   return false;
 }
 
 function doWhile(num) {
@@ -165,6 +183,15 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
+   var a = num;
+   let i = 0;
+   do {
+      i = i + 1;
+      a = a + 5;
+   }
+   while (i < 8){
+      return a
+   }
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
