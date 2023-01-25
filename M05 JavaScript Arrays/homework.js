@@ -107,7 +107,17 @@ function multiplicarArgumentos() {
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
-
+   if (arguments.length === 0) {
+      return 0;
+   }
+   if (arguments.length === 1) {
+      return arguments[0];
+   }
+   var producto = 1;
+   for (let i = 0; i < arguments.length; i++) {
+      producto = producto * arguments[i];
+   };
+   return producto;
 }
 
 function cuentoElementos(array) {
@@ -161,24 +171,24 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
-   var meses = [];
-   for (i = 0; i < array.length; i++){
-      if (array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre"){
-         meses.push(array[i]);
+   var nuevoArreglo = [];
+   for (let i = 0; i < array.length; i++) {
+      if (array[i] === 'Enero' || array[i] === 'Marzo' || array[i] === 'Noviembre') {
+         nuevoArreglo.push(array[i]);
       }
    }
-   if (meses.length < 3 ){
-      return "No se encontarron los meses pedidos";
-   }
-   else {
-      return meses;
-   }
+   return nuevoArreglo;
 }
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+   var multiplos = [0];
+   for (let i = 0; multiplos[i] < 60; i++) {
+      multiplos.push(multiplos[i] + 6);
+   }
+   return multiplos;
 }
 
 function mayorACien(array) {
@@ -186,9 +196,9 @@ function mayorACien(array) {
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
    var mayores = [];
-   for (i = 0; i < array.length; i++){
-      if (array[i] > 100){
-         mayores.push(mayores[i]);
+   for (let i = 0; i < array.length; i++) {
+      if (array[i] > 100) {
+         mayores.push(array[i]);
       }
    }
    return mayores;
